@@ -1,0 +1,95 @@
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta author="Bankó Ádám">
+    <title>MD preview</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Markdown preview</h1>
+        </div>
+    </header>
+    <div id="user-input">
+        <textarea id="textarea-input" placeholder="Írj ide Markdown szöveget..."></textarea>
+    </div>
+    <div id="markdown-output">
+        <div id="output">
+        </div>
+    </div>
+    <div id="tools">
+        <button id="copy-button">Másolás</button>
+        <button id="clear-button">Törlés</button>
+        <button id="download-button">Letöltés</button>
+    </div>
+    <div id="instructions">
+        <h2>Használat</h2>
+        <p>Írj be Markdown szöveget a bal oldali mezőbe, és azonnal láthatod a formázott HTML előnézetet a jobb oldalon.</p>
+        <h2>Markdown szintaxis</h2>
+        <table>
+            <tr>
+                <th>Szintaxis</th>
+                <th>Leírás</th>
+            </tr>
+            <tr>
+                <td>Címsorok:</td>
+                <td>A sor elejére tett kettőskeresztek (#) száma jelöli a címsor szintjét (1-től 6-ig). Fontos: mindig tegyél szóközt a # után!<br>PL: # h1, ## h2, ### h3</td>
+            </tr>
+            <tr>
+                <td>Vízszintes vonal:</td>
+                <td>--- vagy *** vagy ___</td>
+            </tr>
+            <tr>
+                <td>Félkövér (Bold)</td>
+                <td>**szöveg** vagy __szöveg__</td>
+            </tr>
+            <tr>
+                <td>Dőlt (Italic)</td>
+                <td>*dőlt szöveg* vagy _dőlt szöveg_</td>
+            </tr>
+            <tr>
+                <td>Félkövér és dőlt</td>
+                <td>***szöveg*** vagy ___szöveg___</td>
+            </tr>
+            <tr>
+                <td>Link:</td>
+                <td>[Link szöveg](http://example.com)</td>
+            </tr>
+            <tr>
+                <td>Kép:</td>
+                <td>![Alt szöveg](http://example.com/kep.jpg)</td>
+            </tr>
+            <tr>
+                <td>Kódblokk:</td>
+                <td>```kód```</td>
+            </tr>
+            <tr>
+                <td>Lista:</td>
+                <td>- vagy * a sor elején</td>
+            </tr>
+            <tr>
+                <td>Számozott lista:</td>
+                <td>1. a sor elején</td>
+            </tr>
+            <tr>
+                <td>Idézet:</td>
+                <td>> a sor elején</td>
+            </tr>
+            <tr>
+                <td>Táblázat:</td>
+                <td>
+                    | Oszlop 1 | Oszlop 2 | Oszlop 3 |<br>
+                    | :--- | :---: | ---: |<br>
+                    | Balra zárt | Középre zárt | Jobbra zárt |<br>
+                    | Adat 1 | Adat 2 | Adat 3 |
+                </td>
+
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
